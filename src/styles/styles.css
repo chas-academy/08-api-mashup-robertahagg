@@ -1,0 +1,44 @@
+.sidenav {
+    height: 60%;
+    width: 250px;
+    top: 10px;
+    left: 0;
+    padding-top: 20px;
+    border-style: hidden;
+    color: gray;
+    float: right;
+    border: 1px solid gray;
+}
+
+.sidenav a {
+    padding: 4px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    text-decoration: none;
+}
+
+header {
+    padding: 3em;
+    color: gray;
+    clear: left;
+    text-align: center;
+}
+
+.search,
+.results,
+.sidenav {
+    text-align: center;
+}
+
+.search {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}

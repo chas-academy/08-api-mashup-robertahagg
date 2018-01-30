@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Using the XMLHttpRequest Object</h2>
+
+    <div id="demo">
+
+        <form action="javascript:searchAll()">
+            Search term:<br>
+            <input id="term" type="text" name="term" value="love">
+            <input name="Submit" type="submit" value="Update" />
+        </form>
+
+    </div>
+
+    <script>
+        function searchForSynonyms(word) {
+
+            const xhttp = new XMLHttpRequest();
+
+            const callback = () => {
+                console.log("Call back called! xhttp.readyState: " + xhttp.readyState);
+
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+
+                    // document.getElementById("demo").innerHTML = xhttp.responseText;
+
+                    var words = JSON.parse(xhttp.responseText).noun.syn;
+                    addWordsToDom(words);
+                }
+            };
+
+            xhttp.onreadystatechange = callback;
+
+            xhttp.open("GET", "http://words.bighugelabs.com/api/2/06189ca43ea50d2f6561136c39d82538/" + word + "/json", true);
+            xhttp.send();
+
+            console.log("Request sent...");
+        }
+
+        function addWordsToDom(words) {
+            for (var i = 0; i < words.length; i++) {
+                console.log("word " + i + ": " + words[i]);
+            }
+        }
+
+
+
+        function searchForImages(word) {
+
+        }
+
+        function getSearchWord() {
+            return document.getElementById("term").value;
+        }
+
+        function searchAll() { // Den här funktionen kör först när man tycker på submit, se ovan.
+            const searchWord = getSearchWord();
+            searchForSynonyms(searchWord);
+            searchForImages(searchWord);
+        }
+    </script>
+
+</body>
+
+</html>
