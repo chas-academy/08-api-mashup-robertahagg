@@ -14,13 +14,12 @@ function searchForSynonyms(word) {
 
     xhttp.onreadystatechange = callback;
 
-    xhttp.open(
-        "GET",
+    const url =
         "http://words.bighugelabs.com/api/2/06189ca43ea50d2f6561136c39d82538/" +
         word +
-        "/json",
-        true
-    );
+        "/json";
+
+    xhttp.open("GET", url, true);
     xhttp.send();
 
     console.log("Request sent...");
@@ -29,5 +28,11 @@ function searchForSynonyms(word) {
 function addWordsToDom(words) {
     for (var i = 0; i < words.length; i++) {
         console.log("word " + i + ": " + words[i]);
+
+        // html1 and html2 will have the same content
+        const html1 = "<li>" + words[i] + "</li>"; // Classic way, like many other languages.
+        const html2 = `<li>${words[i]}</li>`; // Modern JS way https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+        $(".relatedWords").append(html2);
     }
 }

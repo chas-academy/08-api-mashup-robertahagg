@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="/src/scripts/synonyms.js"></script>
-    <script src="/src/scripts/flickr.js"></script>
-    <script src="/src/scripts/app.js"></script>
+    <script src="../scripts/synonyms.js"></script>
+    <script src="../scripts/flickr.js"></script>
+    <script src="../scripts/app.js"></script>
 
     <link rel="stylesheet" href="/src/styles/styles.css">
 
@@ -19,18 +19,14 @@
     <header>API Mashup</header>
     <main>
         <div class="search">
-            <form action="javascript:loadXMLDoc()">
-                <input type="text" name="term" placeholder="Find pictures">
-                <button class="btn-serach">Search</button>
+            <form action="javascript:searchAll()">
+                <input id="term" type="text" name="term" value="love" placeholder="Find pictures">
+                <input name="Submit" type="submit" value="Search" />
             </form>
         </div>
 
         <aside class="sidenav">
-            <ul>
-                <!--       <a href="#">item 1</a>
-                <a href="#">item 2</a>
-                <a href="#">item 3</a>
-                <a href="#">item 4</a> -->
+            <ul class="relatedWords">
             </ul>
         </aside>
         <section class="results">

@@ -1,5 +1,5 @@
 function getSearchWord() {
-    return document.getElementById("term").value;
+    return document.getElementById("term").value; // TODO: Ändra till jQuery för att göra samma sak.
 }
 
 function searchAll() {

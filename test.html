@@ -1,67 +1,60 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../scripts/synonyms.js"></script>
+    <script src="../scripts/flickr.js"></script>
+    <script src="../scripts/app.js"></script>
 
-    <h2>Using the XMLHttpRequest Object</h2>
-
-    <div id="demo">
-
-        <form action="javascript:searchAll()">
-            Search term:<br>
-            <input id="term" type="text" name="term" value="love">
-            <input name="Submit" type="submit" value="Update" />
-        </form>
-
-    </div>
-
-    <script>
-        function searchForSynonyms(word) {
-
-            const xhttp = new XMLHttpRequest();
-
-            const callback = () => {
-                console.log("Call back called! xhttp.readyState: " + xhttp.readyState);
-
-                if (xhttp.readyState == 4 && xhttp.status == 200) {
-
-                    // document.getElementById("demo").innerHTML = xhttp.responseText;
-
-                    var words = JSON.parse(xhttp.responseText).noun.syn;
-                    addWordsToDom(words);
-                }
-            };
-
-            xhttp.onreadystatechange = callback;
-
-            xhttp.open("GET", "http://words.bighugelabs.com/api/2/06189ca43ea50d2f6561136c39d82538/" + word + "/json", true);
-            xhttp.send();
-
-            console.log("Request sent...");
-        }
-
-        function addWordsToDom(words) {
-            for (var i = 0; i < words.length; i++) {
-                console.log("word " + i + ": " + words[i]);
-            }
-        }
+    <link rel="stylesheet" href="/src/styles/styles.css">
 
 
+    <title>APi-Mashup</title>
+</head>
+<div class="container">
+    <header>API Mashup</header>
+    <main>
+        <div class="search">
+            <form action="javascript:searchAll()">
+                <input id="term" type="text" name="term" value="love" placeholder="Find pictures">
+                <input name="Submit" type="submit" value="Search" />
+            </form>
+        </div>
 
-        function searchForImages(word) {
+        <aside class="sidenav">
+            <ul class="relatedWords">
+                <a href="#">item 1</a>
+                <a href="#">item 2</a>
+                <a href="#">item 3</a>
+                <a href="#">item 4</a>
+            </ul>
+        </aside>
+        <section class="results">
+            <ul>
+                <li>picture 1</li>
+                <li>picture 1</li>
+                <li>picture 1</li>
+                <li>picture 1</li>
+                <li>picture 1</li>
+            </ul>
 
-        }
 
-        function getSearchWord() {
-            return document.getElementById("term").value;
-        }
+        </section>
+    </main>
+</div>
+</main>
+<footer>
 
-        function searchAll() { // Den här funktionen kör först när man tycker på submit, se ovan.
-            const searchWord = getSearchWord();
-            searchForSynonyms(searchWord);
-            searchForImages(searchWord);
-        }
-    </script>
+</footer>
+
+</html>
+function getSearchWord() { return document.getElementById("term").value; } function searchAll() { // Den här funktionen kör först när man tycker på submit, se ovan. const searchWord = getSearchWord(); searchForSynonyms(searchWord); searchForImages(searchWord);
+}
+</script>
 
 </body>
 
