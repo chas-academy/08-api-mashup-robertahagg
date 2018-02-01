@@ -7,7 +7,7 @@ function searchForSynonyms(word) {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             // document.getElementById("demo").innerHTML = xhttp.responseText;
 
-            var words = JSON.parse(xhttp.responseText).noun.syn;
+            const words = JSON.parse(xhttp.responseText).noun.syn;
             addWordsToDom(words);
         }
     };
@@ -26,11 +26,11 @@ function searchForSynonyms(word) {
 }
 
 function addWordsToDom(words) {
-    for (var i = 0; i < words.length; i++) {
+    for (let i = 0; i < words.length; i++) {
         console.log("word " + i + ": " + words[i]);
 
         // html1 and html2 will have the same content
-        const html1 = "<li>" + words[i] + "</li>"; // Classic way, like many other languages.
+        const html1 = "<li>" + words[i] + "</li>"; // Classic way, used in other languages.
         const html2 = `<li>${words[i]}</li>`; // Modern JS way https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
         $(".relatedWords").append(html2);
