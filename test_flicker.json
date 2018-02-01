@@ -1,120 +1,97 @@
-jsonFlickrApi({
-    "photos": {
-        "page": 1,
-        "pages": 29555,
-        "perpage": 10,
-        "total": "295550",
-        "photo": [{
-                "id": "28246102939",
-                "owner": "154310511@N02",
-                "secret": "44622e62a7",
-                "server": "4630",
-                "farm": 5,
-                "title": "Love Quotes : Tip #4 - 10 Tips for Young Married Couples - TriciaGoyer.com",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+{
+    "sizes": {
+        "canblog": 0,
+        "canprint": 0,
+        "candownload": 1,
+        "size": [{
+                "label": "Square",
+                "width": 75,
+                "height": 75,
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_s.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/sq/",
+                "media": "photo"
             },
             {
-                "id": "28246086699",
-                "owner": "53754884@N03",
-                "secret": "6d6fc4f56b",
-                "server": "4614",
-                "farm": 5,
-                "title": "Diamond select harley quinn 25th anniversary figure",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Large Square",
+                "width": "150",
+                "height": "150",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_q.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/q/",
+                "media": "photo"
             },
             {
-                "id": "39127338835",
-                "owner": "153866415@N06",
-                "secret": "8544314d62",
-                "server": "4750",
-                "farm": 5,
-                "title": "Success Quotes : Believe you deserve it and the universe will serve it. #regram June Ambrose #the\u2026",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Thumbnail",
+                "width": "100",
+                "height": "56",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_t.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/t/",
+                "media": "photo"
             },
             {
-                "id": "39993612312",
-                "owner": "153866415@N06",
-                "secret": "cba3ed4e18",
-                "server": "4749",
-                "farm": 5,
-                "title": "Inspirational Quotes about Work : inspirational quotes about life, inspirational quotes about strength, quotes abo\u2026",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Small",
+                "width": "240",
+                "height": "135",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_m.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/s/",
+                "media": "photo"
             },
             {
-                "id": "25154493817",
-                "owner": "138117041@N03",
-                "secret": "0b9a66c100",
-                "server": "4747",
-                "farm": 5,
-                "title": "Love quote and saying : happy birthday to my love",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Small 320",
+                "width": "320",
+                "height": 180,
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_n.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/n/",
+                "media": "photo"
             },
             {
-                "id": "39127306405",
-                "owner": "157426759@N08",
-                "secret": "b61687301d",
-                "server": "4667",
-                "farm": 5,
-                "title": "Love Quotes For Him & For Her :3 Reasons Why Men Choose Other Women Over You (And What You Can Do About It) com...",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Medium",
+                "width": "500",
+                "height": "281",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/m/",
+                "media": "photo"
             },
             {
-                "id": "40025047351",
-                "owner": "155233060@N02",
-                "secret": "73ffcb29c4",
-                "server": "4609",
-                "farm": 5,
-                "title": "IMG_3254",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Medium 640",
+                "width": "640",
+                "height": "360",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_z.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/z/",
+                "media": "photo"
             },
             {
-                "id": "26152227458",
-                "owner": "151908744@N08",
-                "secret": "83ee5b0dc7",
-                "server": "4613",
-                "farm": 5,
-                "title": "Breaking up and Moving on Quotes : I didn't necessarily grow up in the 90's but I was forced to eat these! \u2026",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Medium 800",
+                "width": "800",
+                "height": 450,
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_c.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/c/",
+                "media": "photo"
             },
             {
-                "id": "39315440234",
-                "owner": "151908744@N08",
-                "secret": "4ac9529968",
-                "server": "4606",
-                "farm": 5,
-                "title": "Inspirational And Motivational Quotes : 33 Fantastic Inspirational Quotes #motivation #motivationalquotes #wisdom #grea\u2026",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Large",
+                "width": "1024",
+                "height": "576",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_1a15fc4bfb_b.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/l/",
+                "media": "photo"
             },
             {
-                "id": "39993586362",
-                "owner": "151908744@N08",
-                "secret": "3ebe5c46ee",
-                "server": "4667",
-                "farm": 5,
-                "title": "Famous Celebrity Quotes : The irony is that it's the epiphany that your parents are very real humans t\u2026",
-                "ispublic": 1,
-                "isfriend": 0,
-                "isfamily": 0
+                "label": "Large 1600",
+                "width": "1600",
+                "height": 900,
+                "source": "https://farm8.staticflickr.com/7300/15935605723_02554b7e5a_h.jpg",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/h/",
+                "media": "photo"
+            },
+            {
+                "label": "Original",
+                "width": "1920",
+                "height": "1080",
+                "source": "https://farm8.staticflickr.com/7300/15935605723_e2825125d2_o.png",
+                "url": "https://www.flickr.com/photos/steveczajka/15935605723/sizes/o/",
+                "media": "photo"
             }
         ]
     },
     "stat": "ok"
-})
+}
