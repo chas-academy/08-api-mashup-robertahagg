@@ -5,9 +5,10 @@
     left: 0;
     padding-top: 20px;
     border-style: hidden;
-    color: gray;
+    color: #818181;
     float: right;
     border: 1px solid gray;
+    margin-right: 125px;
 }
 
 .sidenav a {

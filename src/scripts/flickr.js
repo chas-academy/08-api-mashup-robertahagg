@@ -3,12 +3,13 @@ function searchForImages(word) {
 
     const callback = () => {
         console.log("Call back called! xhttp.readyState: " + xhttp.readyState);
+
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             // document.getElementById("demo").innerHTML = xhttp.responseText;
 
-            const flickrImages = JSON.parse(xhttp.responseText).response.photos.photo[
-                i
-            ].title;
+            //console.log(xhttp.responseText);
+
+            const flickrImages = JSON.parse(xhttp.responseText).photos.photo;
             addImagesToDom(flickrImages);
         }
     };
@@ -22,9 +23,13 @@ function searchForImages(word) {
         "&text=" +
         word +
         "&format=json" +
-        "&per_page=10"; //Ändra till FlickrAPI nyckel
+        "&per_page=10" +
+        "&nojsoncallback=1"; //Ändra till FlickrAPI nyckel
 
-    console.log("Url:" + url);
+    console.log("Url1: " + url);
+    /*    console.log(
+                  "Url2: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1d8d0d872549db0d8a78907c4b33faa4&text=love&format=json&per_page=10"
+              ); */
 
     xhttp.open("GET", url, true);
     xhttp.send();
@@ -41,11 +46,11 @@ function searchForImages(word) {
 
 function addImagesToDom(flickrImages) {
     for (let i = 0; i < flickrImages.length; i++) {
-        console.log("image " + i + ": " + title[i]);
+        console.log("image " + i + ": " + flickrImages[i]);
 
         // html1 and html2 will have the same content
-        const html1 = "<li>" + [i].title + "</li>"; // Classic way, used in other languages.
-        const html2 = `<li>${title[i]}</li>`; // Modern JS way https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+        const html1 = "<li>" + flickrImages[i] + "</li>"; // Classic way, used in other languages.
+        const html2 = `<li>${flickrImages[i].title}</li>`; // Modern JS way https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
         $(".flickrImages").append(html2);
     }
