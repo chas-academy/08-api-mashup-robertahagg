@@ -35,4 +35,13 @@ function addWordsToDom(words) {
 
         $(".relatedWords").append(html2);
     }
+
+    $(".relatedWords")
+        .children()
+        .on("click", function(event) {
+            const newSearchWord = $(event.target).text();
+
+            $("#term").val(newSearchWord);
+            searchAll();
+        });
 }

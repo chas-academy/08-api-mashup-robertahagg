@@ -3,7 +3,7 @@ function searchForImages(word) {
 
     const callback = () => {
         //callback
-        console.log("Call back called! xhttp.readyState: " + xhttp.readyState); // readyState describes the loading state of the document.
+        // console.log("Call back called! xhttp.readyState: " + xhttp.readyState); // readyState describes the loading state of the document.
 
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             // ==4 (The operation is complete), == 200 (ok status message)
@@ -11,7 +11,7 @@ function searchForImages(word) {
 
             //console.log(xhttp.responseText);
 
-            const flickrImages = JSON.parse(xhttp.responseText).photos.photo;
+            const flickrImages = JSON.parse(xhttp.responseText).photos.photo; //Json object
             addImagesToDom(flickrImages);
         }
     };
@@ -32,8 +32,8 @@ function searchForImages(word) {
 
     console.log("Url1: " + url);
     /*    console.log(
-                                                            "Url2: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1d8d0d872549db0d8a78907c4b33faa4&text=love&format=json&per_page=10"
-                                                        ); */
+                                                                "Url2: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1d8d0d872549db0d8a78907c4b33faa4&text=love&format=json&per_page=10"
+                                                            ); */
 
     xhttp.open("GET", url, true); // xhttp.open = method that initializes a request
     xhttp.send(); // method that sends the request and returns as soon as the request is sent.
@@ -51,11 +51,9 @@ function searchForImages(word) {
 function addImagesToDom(flickrImages) {
     //array that lets you loop through the lenght of the list
     for (let i = 0; i < flickrImages.length; i++) {
-        console.log("image " + i + ": " + flickrImages[i]);
+        //console.log("image " + i + ": " + flickrImages[i]);
 
-        // html1 and html2 will have the same content
-
-        const html1 = // where in the dom the images with title will go
+        const html1 = // HTML created
             "<li><img id='" +
             flickrImages[i].id +
             "'height=150 width=150>" +
@@ -63,7 +61,7 @@ function addImagesToDom(flickrImages) {
             "</li>"; // Classic way, used in other languages.
         //  const html2 = `<li>${flickrImages[i].title}</li>`; // Modern JS way https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
-        $(".flickrImages").append(html1);
+        $(".flickrImages").append(html1); //where in the dom the images with title will go
 
         getImageUrlFromFlickr(flickrImages[i].id);
     }
@@ -74,7 +72,7 @@ function getImageUrlFromFlickr(flickrImageId) {
 
     const callback = () => {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log("xhttp.responseText=" + xhttp.responseText);
+            // console.log("xhttp.responseText=" + xhttp.responseText);
             const flickrImageSizeList = JSON.parse(xhttp.responseText).sizes.size;
 
             for (let i = 0; i < flickrImageSizeList.length; i++) {
@@ -100,8 +98,8 @@ function getImageUrlFromFlickr(flickrImageId) {
 
     console.log("Url1: " + url);
     /*    console.log(
-                                                            "Url2: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1d8d0d872549db0d8a78907c4b33faa4&text=love&format=json&per_page=10"
-                                                        ); */
+                                                                "Url2: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1d8d0d872549db0d8a78907c4b33faa4&text=love&format=json&per_page=10"
+                                                            ); */
 
     xhttp.open("GET", url, true);
     xhttp.send();
